@@ -42,7 +42,7 @@ const AuthForm = ({ action }: Props) => {
           onClick={async () => {
             await authClient.signIn.social(
               {
-                provider: "google",
+                provider: "github",
                 callbackURL: `${APP_DOMAIN}/dashboard`,
               },
               {

@@ -3,8 +3,8 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import client from "./db.js";
 import {
   CLIENT_DOMAIN,
-  GOOGLE_CLIENT_ID,
-  GOOGLE_CLIENT_SECRET,
+  GITHUB_CLIENT_ID,
+  GITHUB_CLIENT_SECRET,
 } from "../env.js";
 import { createAuthMiddleware } from "better-auth/api";
 import db from "../database/db.js";
@@ -17,9 +17,9 @@ export const auth = betterAuth({
   database: mongodbAdapter(dbClient),
   trustedOrigins: [CLIENT_DOMAIN],
   socialProviders: {
-    google: {
-      clientId: GOOGLE_CLIENT_ID,
-      clientSecret: GOOGLE_CLIENT_SECRET,
+    github: {
+      clientId: GITHUB_CLIENT_ID,
+      clientSecret: GITHUB_CLIENT_SECRET,
     },
   },
   hooks: {

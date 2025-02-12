@@ -2,8 +2,8 @@ export const MONGODB_URI = process.env.MONGODB_URI || "";
 
 export const CLIENT_DOMAIN = process.env.CLIENT_DOMAIN || "";
 
-export const GOOGLE_CLIENT_SECRET = process.env.GOOGLE_CLIENT_SECRET || "";
-export const GOOGLE_CLIENT_ID = process.env.GOOGLE_CLIENT_ID || "";
+export const GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET || "";
+export const GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID || "";
 // Paypal
 export const PAYPAL_CLIENT_ID = process.env.PAYPAL_CLIENT_ID || "";
 export const PAYPAL_SECRET_KEY = process.env.PAYPAL_SECRET_KEY || "";

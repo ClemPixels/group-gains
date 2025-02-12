@@ -37,7 +37,7 @@ export const keyVerify = async () => {
 
     if (key && key === subscription.subscription_key) {
       // Generate Invite Link Here
-      const link = (await generateInviteLink(Number(groupInfo.group_id)))
+      const link = (await generateInviteLink(Number(groupInfo.group_id), userId as number))
         .invite_link;
 
       bot.sendMessage(chatId, `You key is valid. Invite Link: ${link}`);

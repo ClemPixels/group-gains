@@ -47,7 +47,7 @@ const errorHandler = async (err, c) => {
 // Custom ValidationError class
 export class ValidationError extends HTTPException {
     details;
-    message; // Explicitly define the message property
+    message;
     constructor(message, details = {}, statusCode = 500) {
         const errorResponse = new Response(JSON.stringify({
             error: "Validation Error",

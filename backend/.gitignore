@@ -7,6 +7,10 @@
 .idea/workspace.xml
 .idea/usage.statistics.xml
 .idea/shelf
+dist/
+
+# cache
+cache/
 
 # deps
 node_modules/

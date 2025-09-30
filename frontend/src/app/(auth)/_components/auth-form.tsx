@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 
-import { RiGoogleFill, RiLoader3Fill } from "@remixicon/react";
+import { RiGithubFill, RiLoader3Fill } from "@remixicon/react";
 import { authClient } from "@/lib/better-auth/auth-client";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
@@ -69,11 +69,11 @@ const AuthForm = ({ action }: Props) => {
           }}
         >
           {!isLoading ? (
-            <RiGoogleFill />
+            <RiGithubFill />
           ) : (
             <RiLoader3Fill className="animate-spin" />
           )}{" "}
-          {action} with google
+          {action} with github
         </Button>
 
         <P

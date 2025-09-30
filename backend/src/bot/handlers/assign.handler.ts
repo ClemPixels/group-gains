@@ -15,8 +15,8 @@ Now you can manage this group directly on the **Group Gain Platform**.
 - Monitor group member activity.
 - View revenue reports and more!
 
-🔗 **[Login to Group Gain Platform](https://groupgain.example.com)**  
-If you need help, feel free to contact us at [support@example.com](mailto:support@example.com).  
+🔗 **[Login to Group Gain Platform](https://localhost:3000)**  
+If you need help, feel free to contact us at [support@groupgains.com](mailto:egyayemi2006+support@gmail.com).  
 
 Thank you for choosing **Group Gain**! 🚀
 `;
@@ -34,7 +34,7 @@ We couldn’t complete your request. This might be due to one of the following r
 - Make sure your group is set up with the correct permissions.  
 - Try again in a few minutes.  
 
-📧 If the problem persists, contact our support team at [support@example.com](mailto:support@example.com).  
+📧 If the problem persists, contact our support team at [support@groupgains.com](mailto:egyayemi2006+support@gmail.com).  
 
 We’re here to help you! 😊
 `;
@@ -54,7 +54,7 @@ The bot doesn’t have admin privileges in your group. To proceed, please follow
 
 Once the bot has admin privileges, you can continue using the **Group Gain** features.  
 
-❓ Need help? Contact support at [support@example.com](mailto:support@example.com).  
+❓ Need help? Contact support at [support@groupgains.com](mailto:egyayemi2006+support@gmail.com).  
 `;
 
 export const assignGroup = () => {

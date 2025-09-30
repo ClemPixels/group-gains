@@ -12,7 +12,7 @@ import addSession from "./middleware/session.middleware.js";
 import sessionValidator from "./middleware/unauthorized-access.middleware.js";
 import { Server as HttpServer } from "http";
 import { Server } from "socket.io";
-import { CLIENT_DOMAIN } from "./lib/env.js";
+import { CLIENT_DOMAIN, CLIENT_PROD_DOMAIN } from "./lib/env.js";
 const app = new Hono();
 const port = Number(process.env.PORT) || 8080;
 // Middleware stack
@@ -39,7 +39,7 @@ const server = serve({
 });
 const io = new Server(server, {
     cors: {
-        origin: CLIENT_DOMAIN,
+        origin: [CLIENT_DOMAIN, CLIENT_PROD_DOMAIN],
         methods: ["GET", "POST", "OPTIONS"],
         credentials: true,
     },

@@ -14,7 +14,7 @@ If you have received your subscription key via email after completing the paymen
 
 ⚠️ **Note:**  
 - Make sure to replace \`<your_subscription_key>\`with the actual key you received.  
-- If you haven’t received your key or need assistance, please contact us at [support@example.com](mailto:support@example.com).  
+- If you haven’t received your key or need assistance, please contact us at [support@groupgains.com](mailto:egyayemi2006+support@gmail.com).  
 `;
 const registerResponse = `📢 To add your group, please make sure this bot has **admin permissions** in your group.  
 Once done, type the following command in your group:  
@@ -23,7 +23,7 @@ Once done, type the following command in your group:
 
 **Example:** \`/assign group_gain\`  
 
-⚠️ **Note:** Replace \`<group gain username>\` with your actual group gain username. If you face any issues, contact support at [support@example.com](mailto:support@example.com).`;
+⚠️ **Note:** Replace \`<group gain username>\` with your actual group gain username. If you face any issues, contact support at [support@groupgains.com](mailto:egyayemi2006+support@gmail.com).`;
 export const sendMessage = () => {
     bot.on("message", async (msg) => {
         const chatId = msg.chat.id;

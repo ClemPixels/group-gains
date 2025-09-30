@@ -6,9 +6,6 @@
     "outDir": "dist",
     "verbatimModuleSyntax": true,
     "skipLibCheck": true,
-    "types": [
-      "node"
-    ],
     "jsx": "react-jsx",
     // "jsxImportSource": "react"
     "jsxImportSource": "hono/jsx",

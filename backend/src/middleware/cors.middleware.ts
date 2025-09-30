@@ -1,8 +1,8 @@
 import { cors } from "hono/cors";
-import { CLIENT_DOMAIN } from "../lib/env.js";
+import { CLIENT_DOMAIN, CLIENT_PROD_DOMAIN } from "../lib/env.js";
 
 const configCors = cors({
-  origin: CLIENT_DOMAIN,
+  origin: [CLIENT_DOMAIN, CLIENT_PROD_DOMAIN],
   allowHeaders: ["Content-Type", "Authorization"],
   allowMethods: ["POST", "GET", "OPTIONS", "DELETE"],
   exposeHeaders: ["Content-Length"],

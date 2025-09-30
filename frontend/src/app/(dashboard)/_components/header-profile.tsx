@@ -25,7 +25,7 @@ const HeaderProfile = () => {
   const { isPending, data } = session;
   return (
     <>
-      {isPending && <Skeleton className="size-10 rounded-full" />}
+      {isPending && <Skeleton className="size-10 rounded-full cursor-wait" />}
 
       <DropdownMenu>
         <DropdownMenuTrigger>

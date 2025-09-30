@@ -3,6 +3,7 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import client from "./db.js";
 import {
   CLIENT_DOMAIN,
+  CLIENT_PROD_DOMAIN,
   GITHUB_CLIENT_ID,
   GITHUB_CLIENT_SECRET,
 } from "../env.js";
@@ -15,7 +16,7 @@ const dbClient = client.db();
 
 export const auth = betterAuth({
   database: mongodbAdapter(dbClient),
-  trustedOrigins: [CLIENT_DOMAIN],
+  trustedOrigins: [CLIENT_DOMAIN, CLIENT_PROD_DOMAIN],
   socialProviders: {
     github: {
       clientId: GITHUB_CLIENT_ID,

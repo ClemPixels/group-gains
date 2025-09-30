@@ -1,3 +1,4 @@
+import { getMaxListeners } from "events";
 import { Group } from "../../lib/database/model/group.model.js";
 import { Subscription } from "../../lib/database/model/subscription.model.js";
 import bot from "../../lib/telegram/config.js";
@@ -9,11 +10,11 @@ export const keyVerify = async () => {
         const key = match?.[1]; // Group ID provided by the user
         const subscription = await Subscription.findOne({ subscription_key: key });
         if (!subscription) {
-            bot.sendMessage(chatId, `May be your key is invalid or a server error occurred. Please try again`);
+            bot.sendMessage(chatId, `The key you provided is incorrect or does not exist. Please check your key and try again. If the problem persists, contact support: egyayemi2006+support@gmail.com`);
             return;
         }
         if (subscription.status !== "activated") {
-            bot.sendMessage(chatId, `You subscription is not activated`);
+            bot.sendMessage(chatId, `Your subscription is not activated`);
             return;
         }
         const groupInfo = await Group.findOne({ _id: subscription.of_group });

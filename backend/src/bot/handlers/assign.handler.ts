@@ -28,10 +28,16 @@ We couldn’t complete your request. This might be due to one of the following r
 1. An invalid subscription key was entered.  
 2. The group username is incorrect or missing.  
 3. Our servers are temporarily down.  
+4. The bot lacks necessary permissions in your group.
+5. The id entered is not a valid Group Gains User-ID.
 
 ## 🔧 **How to Fix It:**
 - Double-check your subscription key and group username.  
 - Make sure your group is set up with the correct permissions.  
+- Ensure the bot has admin privileges in your group.
+- Verify that you entered a valid Group Gains User-ID.
+  ## - Check your dashboard and click on your user profile to copy your User-ID.
+- Check your internet connection.
 - Try again in a few minutes.  
 
 📧 If the problem persists, contact our support team at [support@groupgains.com](mailto:egyayemi2006+support@gmail.com).  
@@ -120,9 +126,8 @@ export const assignGroup = () => {
 
       bot.sendMessage(chatId, "Please provide a valid Group Gains User-ID.");
     } catch (error) {
-      console.log("Error in assigning group: ", error);
-
-      bot.sendMessage(chatId, `Error: ${error}`);
+      console.error("Error in assigning group: ", error);
+      bot.sendMessage(chatId, `${errorResponse} \nError: ${error}`, { parse_mode: "Markdown" });
     }
   });
 };
